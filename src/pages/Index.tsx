@@ -33,7 +33,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50">
+    <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-10 bg-white shadow-sm backdrop-blur-sm bg-white/90">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
