@@ -33,7 +33,37 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50">
+      {/* Фоновые элементы */}
+      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-100 via-white to-blue-100"></div>
+        <div className="absolute top-10 left-5 w-96 h-96 rounded-full bg-purple-300/20 blur-3xl"></div>
+        <div className="absolute top-1/4 right-10 w-72 h-72 rounded-full bg-blue-400/20 blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full bg-pink-400/10 blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 rounded-full bg-indigo-500/20 blur-3xl"></div>
+        <svg
+          className="absolute top-0 left-0 w-full h-full opacity-10"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <pattern
+              id="grid"
+              width="8"
+              height="8"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M 8 0 L 0 0 0 8"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#grid)" />
+        </svg>
+      </div>
       {/* Header */}
       <header className="sticky top-0 z-10 bg-white shadow-sm backdrop-blur-sm bg-white/90">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -74,37 +104,6 @@ const Index = () => {
       </header>
 
       <main className="relative">
-        {/* Фоновые элементы */}
-        <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-50 via-white to-blue-50"></div>
-          <div className="absolute top-10 left-5 w-96 h-96 rounded-full bg-primary/5 blur-3xl"></div>
-          <div className="absolute top-1/4 right-10 w-72 h-72 rounded-full bg-blue-400/5 blur-3xl"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full bg-purple-400/10 blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-64 h-64 rounded-full bg-primary/5 blur-3xl"></div>
-          <svg
-            className="absolute top-0 left-0 w-full h-full opacity-5"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-          >
-            <defs>
-              <pattern
-                id="grid"
-                width="8"
-                height="8"
-                patternUnits="userSpaceOnUse"
-              >
-                <path
-                  d="M 8 0 L 0 0 0 8"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="0.5"
-                />
-              </pattern>
-            </defs>
-            <rect width="100" height="100" fill="url(#grid)" />
-          </svg>
-        </div>
-
         {/* Hero Section */}
         <section className="relative pt-20 pb-24 md:py-32 overflow-hidden">
           <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
