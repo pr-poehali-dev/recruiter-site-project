@@ -97,11 +97,5 @@
 
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(135deg, #f0f4ff 0%, #f0e6ff 50%, #e6f0ff 100%);
-  }
-
-  /* Добавляем основной фоновый стиль для всего приложения */
-  #root {
-    background: linear-gradient(135deg, #f0f4ff 0%, #f0e6ff 50%, #e6f0ff 100%);
   }
 }
