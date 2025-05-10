@@ -17,9 +17,17 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 5173,
-    allowedHosts: true,
+    strictPort: true, // Не пытаться использовать другой порт если 5173 занят
     hmr: {
-      overlay: false // Disables the error overlay if you only want console errors
+      // Разрешить подключения HMR из любых источников (для поддержки поддомена poehali.dev)
+      clientPort: 443, // Используем 443 для HTTPS
+      host: 'preview--recruiter-site-project.poehali.dev', // Используем домен проекта
+      protocol: 'wss', // Используем защищенное соединение
+    },
+    cors: true,
+    // Убираем наложение ошибок, чтобы улучшить отладку
+    watch: {
+      usePolling: true,
     }
   },
 });
