@@ -33,7 +33,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50">
       {/* Header */}
       <header className="sticky top-0 z-10 bg-white shadow-sm backdrop-blur-sm bg-white/90">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -376,7 +376,7 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border shadow-sm hover:shadow-md transition-shadow">
+              <Card className="border.shadow-sm.hover:shadow-md.transition-shadow">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-1 text-yellow-400 mb-6">
                     <Icon name="Star" size={20} />
